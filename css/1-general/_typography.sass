@@ -1,0 +1,47 @@
+*, html, body, p, h2, h3, h4, h5, a, li, ul, div, .sub-text
+  font-family: 'Raleway', sans-serif
+  @include font-size(14px)
+  line-height: 1.2
+
+h1
+  font-family: 'Permanent Marker', cursive
+  @include font-size(72px)
+
+h2, h3, h4, h5, h6
+  font-family: 'Oswald', sans-serif
+
+h2
+  @include font-size(48px)
+
+h3
+  @include font-size(36px)
+
+h4
+  @include font-size(24px)
+
+h5
+  @include font-size(18px)
+
+.sub-text
+  @include font-size(11px)
+
+ul li
+  list-style: inherit
+  list-style-image: inherit
+  list-style-position: inside
+  display: list-item
+  position: relative
+
+ol li
+  list-style: decimal
+  list-style-image: inherit
+  list-style-position: inside
+  display: list-item
+
+ul span
+  position: absolute
+  left: 9px
+
+a
+  @include transition(.1s)
+  text-decoration: none
