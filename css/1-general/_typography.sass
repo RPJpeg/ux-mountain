@@ -2,6 +2,7 @@
   font-family: 'Raleway', sans-serif
   @include font-size(14px)
   line-height: 1.2
+  color: $my-grey
 
 h1
   font-family: 'Permanent Marker', cursive
@@ -45,3 +46,6 @@ ul span
 a
   @include transition(.1s)
   text-decoration: none
+  color: $highlight-dark
+  &:hover
+    color: $highlight-hover

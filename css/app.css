@@ -3,11 +3,182 @@
   margin: 0;
   box-sizing: border-box; }
 
+html body {
+  background-color: #f2f2f2;
+  position: relative; }
+
+.my-button {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #f2f2f2;
+  background-color: #229BB2;
+  padding: 6px;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  width: 80px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s; }
+  .my-button:hover {
+    background-color: #1C8296; }
+  .my-button:active {
+    transform: translateY(1px); }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto; }
+
+.wrapper {
+  width: 860px;
+  margin: 0 auto; }
+
+.media-card {
+  width: 215px;
+  height: 300px;
+  padding: 6px; }
+  .media-card:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .media-card .inner-card {
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 5px #999; }
+    .media-card .inner-card .media-card-photo {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 50%; }
+    .media-card .inner-card .media-card-textbox {
+      width: 100%;
+      height: 50%;
+      padding: 12px;
+      background-color: #f2f2f2; }
+      .media-card .inner-card .media-card-textbox h5 {
+        color: #737373; }
+      .media-card .inner-card .media-card-textbox p {
+        padding: 10px 0;
+        color: #999; }
+    .media-card .inner-card:hover {
+      box-shadow: 1px 1px 8px #737373; }
+  .media-card .logo-box {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .media-card .logo-box h1 {
+      color: #f2f2f2;
+      text-align: center;
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 0.9;
+      padding-bottom: 12px; }
+    .media-card .logo-box p {
+      color: #f2f2f2;
+      text-align: center; }
+
+.tiny-card {
+  width: 215px;
+  height: 150px;
+  padding: 6px; }
+  .tiny-card .inner-card {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 5px #999;
+    position: relative; }
+    .tiny-card .inner-card p {
+      position: absolute;
+      font-size: 10px;
+      font-size: 0.625rem;
+      bottom: 6px;
+      left: 6px;
+      color: #f2f2f2;
+      text-shadow: 1px 1px 1px black; }
+    .tiny-card .inner-card:hover {
+      box-shadow: 1px 1px 8px #737373; }
+
+.tall-card {
+  width: 215px;
+  height: 450px;
+  padding: 6px; }
+  .tall-card:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .tall-card .inner-card {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    box-shadow: 1px 1px 5px #999; }
+    .tall-card .inner-card img {
+      width: 80%;
+      height: auto;
+      margin: 0 auto; }
+    .tall-card .inner-card h5 {
+      margin: 5px auto 25px auto;
+      color: #737373; }
+    .tall-card .inner-card .sub-text {
+      border-top: 1pt solid #FFB97D;
+      padding-top: 10px; }
+      .tall-card .inner-card .sub-text:first-of-type {
+        border: none;
+        margin-top: 20px;
+        padding-top: 0; }
+    .tall-card .inner-card p {
+      color: #999;
+      padding: 5px 0; }
+    .tall-card .inner-card .my-button {
+      margin: 12px auto 0 auto; }
+    .tall-card .inner-card:hover {
+      box-shadow: 1px 1px 8px #737373; }
+
+.photobox {
+  width: 430px;
+  height: 300px;
+  padding: 6px;
+  position: relative; }
+  .photobox .inner-card {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 5px #999; }
+    .photobox .inner-card .box-image-label {
+      position: absolute;
+      bottom: 6px;
+      left: 6px;
+      width: 50%;
+      height: 80px;
+      padding: 15px;
+      background-color: #f2f2f2; }
+      .photobox .inner-card .box-image-label p {
+        color: #999; }
+      .photobox .inner-card .box-image-label .sub-text {
+        padding-bottom: 10px; }
+    .photobox .inner-card:hover {
+      box-shadow: 1px 1px 8px #737373; }
+
 *, html, body, p, h2, h3, h4, h5, a, li, ul, div, .sub-text {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 1.2; }
+  line-height: 1.2;
+  color: #999; }
 
 h1 {
   font-family: "Permanent Marker", cursive;
@@ -60,6 +231,129 @@ a {
   -ms-transition: 0.1s;
   -o-transition: 0.1s;
   transition: 0.1s;
-  text-decoration: none; }
+  text-decoration: none;
+  color: #229BB2; }
+  a:hover {
+    color: #1C8296; }
+
+nav {
+  width: 150px;
+  height: 70px;
+  position: fixed;
+  top: 5px;
+  left: 5px; }
+  nav i {
+    line-height: 1;
+    color: #f2f2f2;
+    opacity: 0.8;
+    padding: 15px 12px;
+    float: left;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s; }
+    nav i:hover {
+      opacity: 1; }
+    nav i:active {
+      transform: translateY(1px);
+      text-shadow: none; }
+
+.nav-icons {
+  width: 150px;
+  height: 70px;
+  position: fixed;
+  top: 5px;
+  right: 5px; }
+  .nav-icons i {
+    line-height: 1;
+    color: #f2f2f2;
+    opacity: 0.8;
+    padding: 15px 12px;
+    float: right;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s; }
+    .nav-icons i:hover {
+      opacity: 1; }
+
+.mega-menu {
+  z-index: 2000;
+  height: 5px;
+  background-color: #229BB2;
+  position: fixed;
+  width: 100%; }
+
+header {
+  z-index: 1900;
+  height: 90vh;
+  max-height: 500px;
+  width: 100%;
+  background-color: #333;
+  background-image: url(../images/mountains.png);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px; }
+  header .logo-box {
+    height: 70px;
+    width: 70px;
+    align-items: center;
+    justify-content: center; }
+    header .logo-box img {
+      height: 70px;
+      width: 70px; }
+  header h1 {
+    color: #f2f2f2;
+    text-shadow: 2px 2px 2px black; }
+
+main {
+  margin-bottom: 50px; }
+  main .boximage1 {
+    background-image: url(../images/snowboard3.jpg); }
+  main .boximage3 {
+    background-image: url(../images/small-mountains.jpg); }
+  main .boximage4 {
+    background-image: url(../images/snow-forest.jpg); }
+  main .boximage5 {
+    background-image: url(../images/snowboard2.jpg); }
+  main .boximage6 {
+    background-image: url(../images/snowboard1.jpg); }
+  main .boximage7 {
+    background-image: url(../images/snowboard4.jpg); }
+  main .boximage8 {
+    background-image: url(../images/lodging.jpg); }
+  main .boximage9 {
+    background-image: url(../images/skiing.jpg); }
+  main .boximage10 {
+    background-image: url(../images/snowboard2.jpg); }
+  main .wrapper:after {
+    content: "";
+    display: table;
+    clear: both; }
+  main .button-box {
+    margin-top: 50px;
+    width: 425px;
+    height: 135px;
+    border: 2px solid #B26E34;
+    padding: 12px; }
+    main .button-box p {
+      text-align: center;
+      padding: 12px; }
+  main .the-buttons {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    main .the-buttons .my-button {
+      margin: 8px; }
 
 /*# sourceMappingURL=app.css.map */

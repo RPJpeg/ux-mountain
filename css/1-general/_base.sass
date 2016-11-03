@@ -2,3 +2,159 @@
   padding: 0
   margin: 0
   box-sizing: border-box
+
+html body
+  background-color: $my-white
+  position: relative
+
+.my-button
+  @include font-size(12px)
+  color: $my-white
+  background-color: $highlight-dark
+  padding: 6px
+  border: none
+  box-shadow: none
+  cursor: pointer
+  width: 80px
+  @include transition(.1s)
+  &:hover
+    background-color: $highlight-hover
+  &:active
+    transform: translateY(1px)
+
+.float-left
+  float: left
+
+.float-right
+  float: right
+
+.center-block
+  margin-left: auto
+  margin-right: auto
+
+.wrapper
+  width: 860px
+  margin: 0 auto
+
+.media-card
+  width: 215px
+  height: 300px
+  padding: 6px
+  @include clearfix
+  .inner-card
+    width: 100%
+    height: 100%
+    box-shadow: 1px 1px 5px $my-grey
+    .media-card-photo
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      width: 100%
+      height: 50%
+    .media-card-textbox
+      width: 100%
+      height: 50%
+      padding: 12px
+      background-color: $my-white
+      h5
+        color: $my-dark-grey
+      p
+        padding: 10px 0
+        color: $my-grey
+    &:hover
+      box-shadow: 1px 1px 8px $my-dark-grey
+  .logo-box
+    background-color: $my-black
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    h1
+      color: $my-white
+      text-align: center
+      @include font-size(24px)
+      line-height: 0.9
+      padding-bottom: 12px
+    p
+      color: $my-white
+      text-align: center
+
+.tiny-card
+  width: 215px
+  height: 150px
+  padding: 6px
+  .inner-card
+    width: 100%
+    height: 100%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    box-shadow: 1px 1px 5px $my-grey
+    position: relative
+    p
+      position: absolute
+      @include font-size(10px)
+      bottom: 6px
+      left: 6px
+      color: $my-white
+      text-shadow: 1px 1px 1px black
+    &:hover
+      box-shadow: 1px 1px 8px $my-dark-grey
+.tall-card
+  width: 215px
+  height: 450px
+  padding: 6px
+  @include clearfix
+  .inner-card
+    width: 100%
+    height: 100%
+    padding: 12px
+    box-shadow: 1px 1px 5px $my-grey
+    img
+      width: 80%
+      height: auto
+      margin: 0 auto
+    h5
+      margin: 5px auto 25px auto
+      color: $my-dark-grey
+    .sub-text
+      border-top: 1pt solid $prime-light
+      padding-top: 10px
+      &:first-of-type
+        border: none
+        margin-top: 20px
+        padding-top: 0
+    p
+      color: $my-grey
+      padding: 5px 0
+    .my-button
+      margin: 12px auto 0 auto
+    &:hover
+      box-shadow: 1px 1px 8px $my-dark-grey
+
+.photobox
+  width: 430px
+  height: 300px
+  padding: 6px
+  position: relative
+  .inner-card
+    width: 100%
+    height: 100%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    box-shadow: 1px 1px 5px $my-grey
+    .box-image-label
+      position: absolute
+      bottom: 6px
+      left: 6px
+      width: 50%
+      height: 80px
+      padding: 15px
+      background-color: $my-white
+      p
+        color: $my-grey
+      .sub-text
+        padding-bottom: 10px
+    &:hover
+      box-shadow: 1px 1px 8px $my-dark-grey
