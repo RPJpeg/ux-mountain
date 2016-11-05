@@ -17,6 +17,7 @@ html body {
   box-shadow: none;
   cursor: pointer;
   width: 80px;
+  box-shadow: 1px 1px 5px #999;
   -webkit-transition: 0.1s;
   -moz-transition: 0.1s;
   -ms-transition: 0.1s;
@@ -25,13 +26,22 @@ html body {
   .my-button:hover {
     background-color: #1C8296; }
   .my-button:active {
-    transform: translateY(1px); }
+    transform: translateY(1px);
+    box-shadow: none;
+    outline: none; }
+  .my-button:focus {
+    outline: none; }
 
 .float-left {
   float: left; }
 
 .float-right {
   float: right; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .center-block {
   margin-left: auto;
@@ -241,7 +251,8 @@ nav {
   height: 70px;
   position: fixed;
   top: 5px;
-  left: 5px; }
+  left: 5px;
+  z-index: 5000; }
   nav i {
     line-height: 1;
     color: #f2f2f2;
@@ -266,7 +277,8 @@ nav {
   height: 70px;
   position: fixed;
   top: 5px;
-  right: 5px; }
+  right: 5px;
+  z-index: 5000; }
   .nav-icons i {
     line-height: 1;
     color: #f2f2f2;
@@ -290,8 +302,8 @@ nav {
 
 header {
   z-index: 1900;
-  height: 90vh;
-  max-height: 500px;
+  height: 80vh;
+  max-height: 960px;
   width: 100%;
   background-color: #333;
   background-image: url(../images/mountains.png);
@@ -301,7 +313,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px; }
+  margin-bottom: 70px; }
   header .logo-box {
     height: 70px;
     width: 70px;
@@ -315,7 +327,7 @@ header {
     text-shadow: 2px 2px 2px black; }
 
 main {
-  margin-bottom: 50px; }
+  margin-bottom: 70px; }
   main .boximage1 {
     background-image: url(../images/snowboard3.jpg); }
   main .boximage3 {
@@ -339,7 +351,7 @@ main {
     display: table;
     clear: both; }
   main .button-box {
-    margin-top: 50px;
+    margin-top: 70px;
     width: 425px;
     height: 135px;
     border: 2px solid #B26E34;
@@ -355,5 +367,87 @@ main {
     justify-content: center; }
     main .the-buttons .my-button {
       margin: 8px; }
+
+.carousel-box {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 70px;
+  position: relative; }
+  .carousel-box .left-car, .carousel-box .right-car {
+    width: 50%;
+    height: 100%; }
+  .carousel-box .left-car {
+    background-color: #333;
+    float: left; }
+  .carousel-box .right-car {
+    background-color: #FFAB63;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .carousel-box .right-car:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .carousel-box .fa-arrow-left {
+    position: absolute;
+    color: #f2f2f2;
+    opacity: 0.5;
+    z-index: 3000;
+    left: 10px;
+    top: 45%; }
+    .carousel-box .fa-arrow-left:hover {
+      opacity: 0.9; }
+  .carousel-box .fa-arrow-right {
+    position: absolute;
+    color: #f2f2f2;
+    opacity: 0.5;
+    z-index: 3000;
+    right: 10px;
+    top: 45%; }
+    .carousel-box .fa-arrow-right:hover {
+      opacity: 0.9; }
+
+section .section-box {
+  width: 80%;
+  border: 2px solid #B26E34;
+  padding: 12px; }
+  section .section-box p {
+    text-align: center;
+    padding: 12px; }
+  section .section-box h3 {
+    color: #229BB2;
+    text-align: center;
+    padding: 12px; }
+section .section-media-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 70px; }
+section .boximage11 {
+  background-image: url(../images/dining.jpg); }
+section .boximage12 {
+  background-image: url(../images/drinks.jpg); }
+section .boximage13 {
+  background-image: url(../images/danger.jpg); }
+section .boximage14 {
+  background-image: url(../images/dom.jpg); }
+
+.footer-hero {
+  min-height: 300px;
+  width: 100%;
+  background-color: #333; }
+
+footer {
+  min-height: 300px;
+  width: 100%;
+  background-color: #1C8296; }
+
+.sub-footer {
+  min-height: 300px;
+  width: 100%;
+  background-color: #B26E34; }
 
 /*# sourceMappingURL=app.css.map */

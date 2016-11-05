@@ -16,17 +16,25 @@ html body
   box-shadow: none
   cursor: pointer
   width: 80px
+  box-shadow: 1px 1px 5px $my-grey
   @include transition(.1s)
   &:hover
     background-color: $highlight-hover
   &:active
     transform: translateY(1px)
+    box-shadow: none
+    outline: none
+  &:focus
+    outline: none
 
 .float-left
   float: left
 
 .float-right
   float: right
+
+.clearfix
+  @include clearfix
 
 .center-block
   margin-left: auto

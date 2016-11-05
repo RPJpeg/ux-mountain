@@ -1,0 +1,41 @@
+.carousel-box
+  width: 100%
+  height: 600px
+  margin-bottom: 70px
+  position: relative
+
+  .left-car, .right-car
+    width: 50%
+    height: 100%
+
+  .left-car
+    background-color: $my-black
+    float: left
+
+  .right-car
+    background-color: $prime
+    float: right
+    display: flex
+    align-items: center
+    justify-content: center
+    @include clearfix
+
+  .fa-arrow-left
+    position: absolute
+    color: $my-white
+    opacity: .5
+    z-index: 3000
+    left: 10px
+    top: 45%
+    &:hover
+      opacity: .9
+
+  .fa-arrow-right
+    position: absolute
+    color: $my-white
+    opacity: .5
+    z-index: 3000
+    right: 10px
+    top: 45%
+    &:hover
+      opacity: .9
