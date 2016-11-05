@@ -1,4 +1,86 @@
 .footer-hero
-  min-height: 300px
+  min-height: 600px
   width: 100%
   background-color: $my-black
+  background-image: url(../images/mountains-footer.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  .footer-hero-box
+    h1, p, h4
+      color: $my-white
+      text-align: center
+      text-shadow: 2px 2px 2px black
+    h1
+      @include font-size(48px)
+    p
+      @include font-size(16px)
+      padding-bottom: 12px
+    h4
+      padding: 0 0 12px 0
+
+    form
+      margin-top: 30px
+      padding: 24px
+      .form-col1, .form-col2, .form-col3
+        width: 33%
+        height: auto
+      input
+        display: inline
+        text-align: center
+        background-color: rgba(255,255,255,0)
+        border: none
+        border-bottom: 2px solid $my-white
+        margin: 6px
+        padding-left: 0
+        width: 95%
+        @include font-size(16px)
+        color: $prime-light
+        &:focus
+          outline: none
+      p
+        text-align: center
+      .submit-box
+        width: 100%
+        height: 100px
+        display: flex
+        align-items: center
+        justify-content: center
+
+      .submit-button
+        border: 2px solid $my-white
+        width: 100px
+        background-color: rgba(255,255,255,0)
+        color: $my-white
+        padding: 12px
+        @include transition(.1s)
+        &:hover
+          background-color: $highlight-hover
+          cursor: pointer
+        &:active
+          transform: translateY(1px)
+
+    .social-box
+      padding: 24px
+      border: 2px solid $my-white
+      margin: 0 auto
+      width: 80%
+      .social-icon-box
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 12px
+        .fa
+          color: white
+          text-shadow: 2px 2px 2px black
+          margin: 6px
+          @include transition(.1s)
+          &:hover
+            color: $highlight-hover
+          &:active
+            transform: translateY(1px)

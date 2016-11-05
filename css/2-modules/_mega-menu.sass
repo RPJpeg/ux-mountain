@@ -1,0 +1,45 @@
+.mega-menu
+  z-index: 2000
+  height: 5px
+  background-color: $highlight-dark
+  position: fixed
+  width: 100%
+  overflow: hidden
+  @include transition(.3s)
+  ul
+    margin: 0
+    padding: 0
+    min-width: 150px
+    padding-right: 48px
+    list-style: none
+    strong
+      color: $my-white
+      text-shadow: 1px 1px 1px $my-black
+      @include font-size(24px)
+      letter-spacing: 1.5px
+    li
+      padding-top: 16px
+      @include transition(.1s)
+      color: $my-white
+      padding-left: 10px
+      &:hover
+        color: $prime-light
+        transform: translateX(3px)
+  ul > li
+    &:first-child
+      padding-top: 0
+      padding-left: 0
+      &:hover
+        transform: none
+
+  .mega-col
+    width: 23%
+    height: auto
+    padding: 12px
+    margin-top: 40px
+    float: left
+.mega-menu > .mega-col
+  &:first-child
+    margin-left: 35px
+.menu-expand
+  height: 330px

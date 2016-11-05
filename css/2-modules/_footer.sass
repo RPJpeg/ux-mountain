@@ -1,4 +1,41 @@
 footer
-  min-height: 300px
+  min-height: 400px
   width: 100%
-  background-color: $highlight-hover
+  background-color: $my-white
+  display: flex
+  align-items: center
+  justify-content: center
+  h1
+    @include font-size(48px)
+  strong
+    @include font-size(18px)
+
+  .footer-box
+    p
+      padding-bottom: 24px
+      @include font-size(16px)
+    h1
+      margin-left: 20%
+      @include transition(.1s)
+      color: $prime-dark
+      &:hover
+        transform: translateY(1pt)
+    img
+      margin-right: 20%
+      @include transition(.1s)
+      @include border-radius(10px)
+      &:hover
+        transform: translateY(1pt)
+  ul
+    min-width: 150px
+    padding-right: 48px
+    list-style: none
+    li
+      padding-top: 16px
+      @include transition(.1s)
+      &:hover
+        color: $highlight-dark
+        font-weight: 500
+  ul > li
+    &:first-child
+      padding-top: 0

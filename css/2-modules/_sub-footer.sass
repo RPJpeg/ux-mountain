@@ -1,4 +1,27 @@
 .sub-footer
-  min-height: 300px
+  min-height: 100px
   width: 100%
-  background-color: $prime-dark
+  background-color: $highlight-dark
+
+  p, strong, a
+    color: $my-white
+    font-weight: 300
+    padding: 0 6px 6px 0
+    @include font-size(12px)
+  div > p
+    &:first-child
+      padding-top: 26px
+
+  strong
+    @include font-size(16px)
+
+  a
+    @include transition(.1s)
+    &:hover
+      color: $highlight
+  .text-right
+    text-align: right
+    padding-right: 0
+  i
+    color: $my-white
+    padding-right: 6px

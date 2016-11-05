@@ -20,6 +20,10 @@ nav
       transform: translateY(1px)
       text-shadow: none
 
+.nav-invert
+  background-color: $prime-dark
+  @include border-radius(10px)
+
 .nav-icons
   width: 150px
   height: 70px
@@ -36,13 +40,6 @@ nav
     @include transition(.1s)
     &:hover
       opacity: 1
-
-.mega-menu
-  z-index: 2000
-  height: 5px
-  background-color: $highlight-dark
-  position: fixed
-  width: 100%
 
 header
   z-index: 1900

@@ -9,15 +9,16 @@
     height: 100%
 
   .left-car
-    background-color: $my-black
     float: left
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
 
   .right-car
-    background-color: $prime
     float: right
-    display: flex
     align-items: center
     justify-content: center
+    display: flex
     @include clearfix
 
   .fa-arrow-left
@@ -27,8 +28,11 @@
     z-index: 3000
     left: 10px
     top: 45%
+    text-shadow: 2px 2px 12px $my-black
     &:hover
       opacity: .9
+    &:active
+      transform: translateY(1px)
 
   .fa-arrow-right
     position: absolute
@@ -37,5 +41,47 @@
     z-index: 3000
     right: 10px
     top: 45%
+    text-shadow: 2px 2px 12px $my-black
     &:hover
       opacity: .9
+    &:active
+      transform: translateY(1px)
+
+  .right-car1
+    background-color: $prime
+  .right-car2
+    background-color: $highlight-dark
+  .right-car3
+    background-color: $my-dark-grey
+
+  .image-state-1
+    background-image: url(../images/the-lodge.jpg)
+  .image-state-2
+    background-image: url(../images/the-slopes.jpg)
+  .image-state-3
+    background-image: url(../images/dining.jpg)
+
+  .inner-right-car
+    padding: 60px
+    p, em, a
+      @include font-size(18px)
+      color: $my-white
+    a
+      color: $highlight
+      &:hover
+        text-decoration: underline
+    h2, p
+      color: $my-white
+      padding: 24px 0
+    .my-button
+      background-color: rgba(255,255,255,0)
+      outline: 2px solid $my-white
+      box-shadow: none
+      @include font-size(18px)
+      width: 150px
+      &:hover
+        background-color: $my-white
+        color: $my-dark-grey
+  .inner-right-car > p
+    &:last-of-type
+      padding-bottom: 48px

@@ -15,13 +15,55 @@
 </head>
 <body>
 
-  <div class="mega-menu" id="megamenu"></div>
+  <div class="mega-menu" id="megaMenu">
+    <div class="mega-col mega-col-1">
+      <ul>
+        <li><strong>NAVIGATION</strong></li>
+        <a href="#" alt="Main"><li>Main</li></a>
+        <a href="#" alt="Activities"><li>Activities</li></a>
+        <a href="#" alt="Gallery"><li>Gallery</li></a>
+        <a href="#" alt="Calendar"><li>Calendar</li></a>
+        <a href="#" alt="Reservations"><li>Reservations</li></a>
+        <a href="#" alt="Contact"><li>Contact</li></a>
+      </ul>
+    </div>
+    <div class="mega-col mega-col-2">
+      <ul>
+        <li><strong>GALLERY</strong></li>
+        <a href="#" alt="Lodge"><li>Lodge</li></a>
+        <a href="#" alt="Slopes"><li>Slopes</li></a>
+        <a href="#" alt="Hall"><li>Event Hall</li></a>
+        <a href="#" alt="Rooms"><li>Rooms</li></a>
+        <a href="#" alt="Dining"><li>Dining</li></a>
+        <a href="#" alt="Attractions"><li>Attractions</li></a>
+      </ul>
+    </div>
+    <div class="mega-col mega-col-3">
+      <ul>
+        <li><strong>RESERVATIONS</strong></li>
+        <a href="#" alt="Rooms"><li>Rooms</li></a>
+        <a href="#" alt="Lessons"><li>Lessons</li></a>
+        <a href="#" alt="Event Hall"><li>Event Hall</li></a>
+        <a href="#" alt="Lounge"><li>Lounge</li></a>
+      </ul>
+    </div>
+    <div class="mega-col mega-col-4 clearfix">
+      <ul>
+        <li><strong>ABOUT US</strong></li>
+        <a href="#" alt="Story"><li>Story</li></a>
+        <a href="#" alt="Location"><li>Location</li></a>
+        <a href="#" alt="Contact Info"><li>Contact Info</li></a>
+        <a href="#" alt="Staff"><li>Staff</li></a>
+        <a href="#" alt="Rules"><li>Rules &amp; Regulations</li></a>
+      </ul>
+    </div>
+  </div>
 
   <header>
     <h1>UX Mountain</h1>
   </header>
   <nav>
-    <a href="#" class="nav-link" alt="navigation" title="navigation"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+    <a href="#" class="nav-link" alt="navigation" title="navigation"><i class="fa fa-bars fa-2x" aria-hidden="true" id="navLink"></i></a>
   </nav>
   <div class="nav-icons">
     <a href="#" class="search-link" alt="search bar" title="search bar"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a>
@@ -133,14 +175,45 @@
     </div>
   </main>
 
-  <div class="carousel-box">
-    <a href="#" alt="carousel left arrow" title="carousel left arrow" id="carLeft"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
-    <a href="#" alt="carousel right arrow" title="carousel right arrow" id="carRight"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
-    <div class="left-car">
+  <div class="carousel-box carousel-box1" id="carBox1">
+    <a href="#" alt="carousel left arrow" title="carousel left arrow" id="carLeftButtonA"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+    <a href="#" alt="carousel right arrow" title="carousel right arrow" id="carRightButtonA"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
 
+    <div class="left-car image-state-1"></div>
+    <div class="right-car right-car1">
+      <div class="inner-right-car">
+        <h2>UX Mountain Lodge</h2>
+        <p>Excellent place to hang out after a day on the slopes or a day making the best designs out there! Come say "Hi!".  Everyone is welcome!</p>
+        <button class="my-button">Reservations</button>
+      </div>
     </div>
-    <div class="right-car">
+  </div>
 
+  <div class="carousel-box carousel-box2 hidden" id="carBox2">
+    <a href="#" alt="carousel left arrow" title="carousel left arrow" id="carLeftButtonB"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+    <a href="#" alt="carousel right arrow" title="carousel right arrow" id="carRightButtonB"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
+
+    <div class="left-car image-state-2"></div>
+    <div class="right-car right-car2">
+      <div class="inner-right-car">
+        <h2>UX Mountain Slopes</h2>
+        <p>We have the best skiing and snowboarding in the area, hands down! Just check out our <a href="#">reviews</a>. When you experience the <em>design</em> of these mountains first-hand, you'll easily see the difference. Hope to see you soon!</p>
+        <button class="my-button">Reservations</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-box carousel-box3 hidden" id="carBox3">
+    <a href="#" alt="carousel left arrow" title="carousel left arrow" id="carLeftButtonC"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+    <a href="#" alt="carousel right arrow" title="carousel right arrow" id="carRightButtonC"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
+
+    <div class="left-car image-state-3"></div>
+    <div class="right-car right-car3">
+      <div class="inner-right-car">
+        <h2>UX Grill</h2>
+        <p>Some of the best food in the area.  Our chefs are the best food designers in all the land.  If you like good food and a great user experience, then you'll love our grill.  We have food to satisfy any craving!</p>
+        <button class="my-button">Reservations</button>
+      </div>
     </div>
   </div>
 
@@ -194,15 +267,81 @@
   </section>
 
   <div class="footer-hero">
-
+    <div class="footer-hero-box">
+      <div class="overlay"></div>
+      <h1>UX</h1>
+      <h4>Join Our Newsletter</h4>
+      <p>Stay up to date with our events as well as receive radical discounts and promotions!</p>
+      <form action="">
+        <div class="form-col1 float-left">
+          <p>First name</p>
+          <input type="text" name="firstname">
+        </div>
+        <div class="form-col2 float-left">
+          <p>Last name</p>
+          <input type="text" name="lastname">
+        </div>
+        <div class="form-col3 float-left clearfix">
+          <p>Email</p>
+          <input type="text" name="email">
+        </div>
+        <div class="center-block submit-box"><input type="submit" value="Submit" class="submit-button"></div>
+      </form>
+      <div class="social-box">
+        <p>Follow, like, tweet and subscribe!</p>
+        <div class="social-icon-box">
+          <a href="#" alt="UX Mountain Facebook" title="ux mountain facebook" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+          <a href="#" alt="UX Mountain Twitter" title="ux mountain twitter" target="_blank"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+          <a href="#" alt="UX Mountain Instagram" title="ux mountain instagram" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+          <a href="#" alt="UX Mountain Youtube" title="ux mountain youtube" target="_blank"><i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <footer>
-
+    <div class="wrapper">
+      <ul class="float-left">
+        <li><strong>NAVIGATION</strong></li>
+        <a href="#" alt="Main"><li>Main</li></a>
+        <a href="#" alt="Activities"><li>Activities</li></a>
+        <a href="#" alt="Gallery"><li>Gallery</li></a>
+        <a href="#" alt="Calendar"><li>Calendar</li></a>
+        <a href="#" alt="Reservations"><li>Reservations</li></a>
+        <a href="#" alt="Contact"><li>Contact</li></a>
+      </ul>
+      <ul class="float-left">
+        <li><strong>RESERVATIONS</strong></li>
+        <a href="#" alt="Hotel Rooms"><li>Hotel Rooms</li></a>
+        <a href="#" alt="Lessons"><li>Lessons</li></a>
+        <a href="#" alt="Group Events"><li>Group Events</li></a>
+        <a href="#" alt="Dinner"><li>Dinner</li></a>
+      </ul>
+      <ul class="float-left clearfix">
+        <li><strong>ABOUT US</strong></li>
+        <a href="#" alt="Company Info"><li>Company Info</li></a>
+        <a href="#" alt="Calendar"><li>Calendar</li></a>
+        <a href="#" alt="Contact Info"><li>Contact</li></a>
+      </ul>
+      <div class="footer-box float-right clearfix">
+        <p>Check out our company information and sponsors!</p>
+        <a href="#" alt="UX Mountain Home" title="ux mountain home"><h1 class="float-left">UX</h1></a>
+        <a href="#" alt="Sponsor link" title="sponsor link" target="_blank"><img src="http://placehold.it/80x55" alt="sponsor logo" title="sponsor logo" target="_blank" class="float-right clearfix" /> </a>
+      </div>
+    </div>
   </footer>
 
   <div class="sub-footer">
-
+    <div class="wrapper">
+      <div class="left-sub float-left">
+        <p><strong>some of our legal things</strong></p>
+        <P><a href="#" alt="privacy policy">Privacy Policy</a> | <a href="#" alt="terms">Terms &amp; Conditionas</a> | <a href="#" alt="legal">Legal Information</a>
+      </div>
+      <div class="right-sub float-right clearfix">
+        <p><strong class="text-right float-right clearfix">call for more information</strong></p>
+        <p class="float-right clearfix"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> 555-555-5555 | Available M-F 9-5
+      </div>
+    </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
