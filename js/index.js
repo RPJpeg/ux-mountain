@@ -1,15 +1,13 @@
 $(document).ready(function() {
 
   $("#navLink").click(function(e){
-      $("#megaMenu").toggleClass("menu-expand");
-      e.preventDefault();
+    $("#megaMenu").toggleClass("menu-expand");
+    e.preventDefault();
   });
 
-  $("header").click(function(e){
-    if ($(e.target).closest('.notification-container').length === 0) {
-      $("#megaMenu").removeClass("menu-expand");
-      e.preventDefault();
-    }
+  $("header, main, section, .carousel-box, .footer-hero footer, .sub-footer, .wrapper").click(function(e){
+    $("#megaMenu").removeClass("menu-expand");
+    e.preventDefault();
   });
 
   $("#carLeftButtonA").click(function(e){
