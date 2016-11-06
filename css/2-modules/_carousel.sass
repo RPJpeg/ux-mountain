@@ -3,6 +3,11 @@
   height: 600px
   margin-bottom: 70px
   position: relative
+  @include clearfix
+  @include bp-small
+    margin-bottom: 240px
+  @include bp-medium
+    margin-bottom: 675px
 
   .left-car, .right-car
     width: 50%
@@ -13,6 +18,9 @@
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    @include bp-medium
+      float: none
+      width: 100%
 
   .right-car
     float: right
@@ -20,6 +28,10 @@
     justify-content: center
     display: flex
     @include clearfix
+    @include bp-medium
+      float: none
+      width: 100%
+      @include clearfix
 
   .fa-arrow-left
     position: absolute
@@ -46,6 +58,10 @@
       opacity: .9
     &:active
       transform: translateY(1px)
+    @include bp-small
+      top: 140%
+    @include bp-medium
+      top: 140%
 
   .right-car1
     background-color: $prime

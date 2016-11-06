@@ -39,6 +39,10 @@ main
     p
       text-align: center
       padding: 12px
+    @include bp-small
+      height: 320px
+      width: 90%
+      margin: 0 auto
 
   .the-buttons
     width: 100%
@@ -46,7 +50,14 @@ main
     display: flex
     align-items: center
     justify-content: center
+    @include bp-small
+      flex-direction: column
+      height: 170px
     .my-button
-      margin: 8px
-
+      margin: 6px
+      @include bp-medium
+        width: 60px
+        @include font-size(10px)
+      @include bp-small
+        @include font-size(10px)
   margin-bottom: 70px

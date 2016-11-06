@@ -2,12 +2,38 @@ $(document).ready(function() {
 
   $("#navLink").click(function(e){
     $("#megaMenu").toggleClass("menu-expand");
+    $("#openNav").show();
+    $("#closedNav").hide();
     e.preventDefault();
   });
 
-  $("header, main, section, .carousel-box, .footer-hero footer, .sub-footer, .wrapper").click(function(e){
-    $("#megaMenu").removeClass("menu-expand");
+  $("#navClose").click(function(e){
+    $("#megaMenu").toggleClass("menu-expand");
+    $("#openNav").hide();
+    $("#closedNav").show();
     e.preventDefault();
+  });
+
+  var s = $(".fa-bars");
+  var pos = s.position();
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop();
+    if (windowpos >= pos.top & windowpos >=800) {
+      s.addClass("invert-nav");
+    } else {
+      s.removeClass("invert-nav");
+    }
+  });
+
+  var s2 = $(".back-top");
+  var pos2 = s2.position();
+  $(window).scroll(function() {
+    var windowpos2 = $(window).scrollTop();
+    if (windowpos2 >= pos2.top & windowpos2 >=800) {
+      s2.addClass("arrow-show");
+    } else {
+      s2.removeClass("arrow-show");
+    }
   });
 
   $("#carLeftButtonA").click(function(e){

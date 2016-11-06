@@ -38,6 +38,14 @@ html body {
 .float-right {
   float: right; }
 
+@media only screen and (max-width: 30em) {
+  .unfloat-small {
+    float: none; } }
+
+@media only screen and (max-width: 40em) {
+  .unfloat-med {
+    float: none; } }
+
 .clearfix:after {
   content: "";
   display: table;
@@ -50,6 +58,12 @@ html body {
 .wrapper {
   width: 860px;
   margin: 0 auto; }
+  @media only screen and (max-width: 30em) {
+    .wrapper {
+      width: 100%; } }
+  @media only screen and (max-width: 40em) {
+    .wrapper {
+      width: 100%; } }
 
 .media-card {
   width: 215px;
@@ -59,6 +73,18 @@ html body {
     content: "";
     display: table;
     clear: both; }
+  @media only screen and (max-width: 30em) {
+    .media-card {
+      width: 90%;
+      margin: 10px auto; } }
+  @media only screen and (max-width: 30em) {
+    .media-card p {
+      font-size: 11px;
+      font-size: 0.6875rem; } }
+  @media only screen and (max-width: 40em) {
+    .media-card {
+      width: 90%;
+      margin: 10px auto; } }
   .media-card .inner-card {
     width: 100%;
     height: 100%;
@@ -102,6 +128,14 @@ html body {
   width: 215px;
   height: 150px;
   padding: 6px; }
+  @media only screen and (max-width: 30em) {
+    .tiny-card {
+      width: 90%;
+      margin: 10px auto; } }
+  @media only screen and (max-width: 40em) {
+    .tiny-card {
+      width: 90%;
+      margin: 10px auto; } }
   .tiny-card .inner-card {
     width: 100%;
     height: 100%;
@@ -118,6 +152,10 @@ html body {
       left: 6px;
       color: #f2f2f2;
       text-shadow: 1px 1px 1px black; }
+      @media only screen and (max-width: 30em) {
+        .tiny-card .inner-card p p {
+          font-size: 9px;
+          font-size: 0.5625rem; } }
     .tiny-card .inner-card:hover {
       box-shadow: 1px 1px 8px #737373; }
 
@@ -125,10 +163,16 @@ html body {
   width: 215px;
   height: 450px;
   padding: 6px; }
-  .tall-card:after {
-    content: "";
-    display: table;
-    clear: both; }
+  @media only screen and (max-width: 30em) {
+    .tall-card {
+      width: 90%;
+      margin: 10px auto;
+      height: 500px; } }
+  @media only screen and (max-width: 40em) {
+    .tall-card {
+      width: 90%;
+      margin: 10px auto;
+      height: 600px; } }
   .tall-card .inner-card {
     width: 100%;
     height: 100%;
@@ -151,6 +195,10 @@ html body {
     .tall-card .inner-card p {
       color: #999;
       padding: 5px 0; }
+      @media only screen and (max-width: 30em) {
+        .tall-card .inner-card p {
+          font-size: 11px;
+          font-size: 0.6875rem; } }
     .tall-card .inner-card .my-button {
       margin: 12px auto 0 auto; }
     .tall-card .inner-card:hover {
@@ -161,6 +209,17 @@ html body {
   height: 300px;
   padding: 6px;
   position: relative; }
+  @media only screen and (max-width: 30em) {
+    .photobox {
+      width: 90%;
+      margin: 10px auto; }
+      .photobox p {
+        font-size: 11px;
+        font-size: 0.6875rem; } }
+  @media only screen and (max-width: 40em) {
+    .photobox {
+      width: 90%;
+      margin: 10px auto; } }
   .photobox .inner-card {
     width: 100%;
     height: 100%;
@@ -189,8 +248,15 @@ html body {
 .show {
   display: block; }
 
-.flex {
-  display: flex; }
+.back-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  visibility: hidden;
+  background-color: transparent !important; }
+
+html body .arrow-show {
+  visibility: visible; }
 
 *, html, body, p, h2, h3, h4, h5, a, li, ul, div, .sub-text {
   font-family: "Raleway", sans-serif;
@@ -272,7 +338,7 @@ nav {
     opacity: 0.8;
     padding: 15px 12px;
     float: left;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 3px black;
     cursor: pointer;
     -webkit-transition: 0.1s;
     -moz-transition: 0.1s;
@@ -285,12 +351,14 @@ nav {
       transform: translateY(1px);
       text-shadow: none; }
 
-.nav-invert {
-  background-color: #B26E34;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px; }
+.invert-nav {
+  background-color: #229BB2;
+  opacity: 1;
+  transform: translateX(-5px); }
+  .invert-nav:active {
+    transform: none;
+    text-shadow: none;
+    transform: translateX(-5px); }
 
 .nav-icons {
   width: 150px;
@@ -338,6 +406,10 @@ header {
   header h1 {
     color: #f2f2f2;
     text-shadow: 2px 2px 2px black; }
+    @media only screen and (max-width: 30em) {
+      header h1 {
+        font-size: 46px;
+        font-size: 2.875rem; } }
 
 .mega-menu {
   z-index: 2000;
@@ -360,9 +432,17 @@ header {
     .mega-menu ul strong {
       color: #f2f2f2;
       text-shadow: 1px 1px 1px #333;
-      font-size: 24px;
-      font-size: 1.5rem;
-      letter-spacing: 1.5px; }
+      font-size: 18px;
+      font-size: 1.125rem;
+      letter-spacing: 1px; }
+      @media only screen and (max-width: 40em) {
+        .mega-menu ul strong {
+          font-size: 14px;
+          font-size: 0.875rem; } }
+      @media only screen and (max-width: 30em) {
+        .mega-menu ul strong {
+          font-size: 11px;
+          font-size: 0.6875rem; } }
     .mega-menu ul li {
       padding-top: 16px;
       -webkit-transition: 0.1s;
@@ -375,6 +455,15 @@ header {
       .mega-menu ul li:hover {
         color: #FFB97D;
         transform: translateX(3px); }
+      @media only screen and (max-width: 40em) {
+        .mega-menu ul li {
+          font-size: 12px;
+          font-size: 0.75rem; } }
+      @media only screen and (max-width: 30em) {
+        .mega-menu ul li {
+          font-size: 10px;
+          font-size: 0.625rem;
+          padding-top: 6px; } }
   .mega-menu ul > li:first-child {
     padding-top: 0;
     padding-left: 0; }
@@ -386,12 +475,29 @@ header {
     padding: 12px;
     margin-top: 40px;
     float: left; }
+    @media only screen and (max-width: 30em) {
+      .mega-menu .mega-col {
+        float: none;
+        margin-top: 12px; } }
 
 .mega-menu > .mega-col:first-child {
   margin-left: 35px; }
+  @media only screen and (max-width: 40em) {
+    .mega-menu > .mega-col:first-child {
+      margin-left: 30px; } }
+  @media only screen and (max-width: 30em) {
+    .mega-menu > .mega-col:first-child {
+      margin-left: 0;
+      margin-top: 40px; } }
 
 .menu-expand {
   height: 330px; }
+  @media only screen and (max-width: 40em) {
+    .menu-expand {
+      height: 280px; } }
+  @media only screen and (max-width: 30em) {
+    .menu-expand {
+      height: 80vh; } }
 
 main {
   margin-bottom: 70px; }
@@ -426,20 +532,48 @@ main {
     main .button-box p {
       text-align: center;
       padding: 12px; }
+    @media only screen and (max-width: 30em) {
+      main .button-box {
+        height: 320px;
+        width: 90%;
+        margin: 0 auto; } }
   main .the-buttons {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 30em) {
+      main .the-buttons {
+        flex-direction: column;
+        height: 170px; } }
     main .the-buttons .my-button {
-      margin: 8px; }
+      margin: 6px; }
+      @media only screen and (max-width: 40em) {
+        main .the-buttons .my-button {
+          width: 60px;
+          font-size: 10px;
+          font-size: 0.625rem; } }
+      @media only screen and (max-width: 30em) {
+        main .the-buttons .my-button {
+          font-size: 10px;
+          font-size: 0.625rem; } }
 
 .carousel-box {
   width: 100%;
   height: 600px;
   margin-bottom: 70px;
   position: relative; }
+  .carousel-box:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media only screen and (max-width: 30em) {
+    .carousel-box {
+      margin-bottom: 240px; } }
+  @media only screen and (max-width: 40em) {
+    .carousel-box {
+      margin-bottom: 675px; } }
   .carousel-box .left-car, .carousel-box .right-car {
     width: 50%;
     height: 100%; }
@@ -448,6 +582,10 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
+    @media only screen and (max-width: 40em) {
+      .carousel-box .left-car {
+        float: none;
+        width: 100%; } }
   .carousel-box .right-car {
     float: right;
     align-items: center;
@@ -457,6 +595,14 @@ main {
       content: "";
       display: table;
       clear: both; }
+    @media only screen and (max-width: 40em) {
+      .carousel-box .right-car {
+        float: none;
+        width: 100%; }
+        .carousel-box .right-car:after {
+          content: "";
+          display: table;
+          clear: both; } }
   .carousel-box .fa-arrow-left {
     position: absolute;
     color: #f2f2f2;
@@ -481,6 +627,12 @@ main {
       opacity: 0.9; }
     .carousel-box .fa-arrow-right:active {
       transform: translateY(1px); }
+    @media only screen and (max-width: 30em) {
+      .carousel-box .fa-arrow-right {
+        top: 140%; } }
+    @media only screen and (max-width: 40em) {
+      .carousel-box .fa-arrow-right {
+        top: 140%; } }
   .carousel-box .right-car1 {
     background-color: #FFAB63; }
   .carousel-box .right-car2 {
@@ -537,6 +689,12 @@ section .section-media-box {
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 70px; }
+  @media only screen and (max-width: 30em) {
+    section .section-media-box {
+      flex-direction: column; } }
+  @media only screen and (max-width: 40em) {
+    section .section-media-box {
+      flex-direction: column; } }
 section .boximage11 {
   background-image: url(../images/dining.jpg); }
 section .boximage12 {
@@ -569,6 +727,12 @@ section .boximage14 {
     font-size: 16px;
     font-size: 1rem;
     padding-bottom: 12px; }
+    @media only screen and (max-width: 30em) {
+      .footer-hero .footer-hero-box p {
+        padding: 6px; } }
+    @media only screen and (max-width: 40em) {
+      .footer-hero .footer-hero-box p {
+        padding: 6px; } }
   .footer-hero .footer-hero-box h4 {
     padding: 0 0 12px 0; }
   .footer-hero .footer-hero-box form {
@@ -656,6 +820,9 @@ footer {
     padding-bottom: 24px;
     font-size: 16px;
     font-size: 1rem; }
+    @media only screen and (max-width: 40em) {
+      footer .footer-box p {
+        text-align: center; } }
   footer .footer-box h1 {
     margin-left: 20%;
     -webkit-transition: 0.1s;
@@ -666,6 +833,9 @@ footer {
     color: #B26E34; }
     footer .footer-box h1:hover {
       transform: translateY(1pt); }
+    @media only screen and (max-width: 40em) {
+      footer .footer-box h1 {
+        margin-left: 10%; } }
   footer .footer-box img {
     margin-right: 20%;
     -webkit-transition: 0.1s;
@@ -679,10 +849,29 @@ footer {
     border-radius: 10px; }
     footer .footer-box img:hover {
       transform: translateY(1pt); }
+    @media only screen and (max-width: 40em) {
+      footer .footer-box img {
+        margin-right: 10%; } }
+  @media only screen and (max-width: 30em) {
+    footer .footer-box {
+      margin: 24px 50px; } }
+  @media only screen and (max-width: 40em) {
+    footer .footer-box {
+      margin: 50px auto 50px auto; } }
   footer ul {
     min-width: 150px;
     padding-right: 48px;
     list-style: none; }
+    @media only screen and (max-width: 30em) {
+      footer ul {
+        margin-top: 24px;
+        margin-left: 0;
+        padding-right: 0; } }
+    @media only screen and (max-width: 40em) {
+      footer ul {
+        margin-top: 24px;
+        margin-left: 0;
+        padding-right: 0; } }
     footer ul li {
       padding-top: 16px;
       -webkit-transition: 0.1s;
@@ -693,6 +882,9 @@ footer {
       footer ul li:hover {
         color: #229BB2;
         font-weight: 500; }
+      @media only screen and (max-width: 30em) {
+        footer ul li {
+          text-align: center; } }
   footer ul > li:first-child {
     padding-top: 0; }
 
@@ -706,6 +898,13 @@ footer {
     padding: 0 6px 6px 0;
     font-size: 12px;
     font-size: 0.75rem; }
+    @media only screen and (max-width: 30em) {
+      .sub-footer p, .sub-footer strong, .sub-footer a {
+        padding: 6px;
+        text-align: center; } }
+    @media only screen and (max-width: 40em) {
+      .sub-footer p, .sub-footer strong, .sub-footer a {
+        text-align: center; } }
   .sub-footer div > p:first-child {
     padding-top: 26px; }
   .sub-footer strong {
@@ -725,5 +924,11 @@ footer {
   .sub-footer i {
     color: #f2f2f2;
     padding-right: 6px; }
+    @media only screen and (max-width: 30em) {
+      .sub-footer i {
+        margin-bottom: 24px; } }
+    @media only screen and (max-width: 40em) {
+      .sub-footer i {
+        margin-bottom: 24px; } }
 
 /*# sourceMappingURL=app.css.map */

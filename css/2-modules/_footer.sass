@@ -14,28 +14,48 @@ footer
     p
       padding-bottom: 24px
       @include font-size(16px)
+      @include bp-medium
+        text-align: center
     h1
       margin-left: 20%
       @include transition(.1s)
       color: $prime-dark
       &:hover
         transform: translateY(1pt)
+      @include bp-medium
+        margin-left: 10%
     img
       margin-right: 20%
       @include transition(.1s)
       @include border-radius(10px)
       &:hover
         transform: translateY(1pt)
+      @include bp-medium
+        margin-right: 10%
+    @include bp-small
+      margin: 24px 50px
+    @include bp-medium
+      margin: 50px auto 50px auto
   ul
     min-width: 150px
     padding-right: 48px
     list-style: none
+    @include bp-small
+      margin-top: 24px
+      margin-left: 0
+      padding-right: 0
+    @include bp-medium
+      margin-top: 24px
+      margin-left: 0
+      padding-right: 0
     li
       padding-top: 16px
       @include transition(.1s)
       &:hover
         color: $highlight-dark
         font-weight: 500
+      @include bp-small
+        text-align: center
   ul > li
     &:first-child
       padding-top: 0

@@ -62,9 +62,13 @@
   <header>
     <h1>UX Mountain</h1>
   </header>
-  <nav>
-    <a href="#" class="nav-link" alt="navigation" title="navigation"><i class="fa fa-bars fa-2x" aria-hidden="true" id="navLink"></i></a>
+  <nav id="closedNav">
+    <a href="#" alt="navigation" title="navigation"><i class="fa fa-bars fa-2x" aria-hidden="true" id="navLink"></i></a>
   </nav>
+  <nav class="hidden" id="openNav">
+    <a href="#" alt="navigation" title="navigation"><i class="fa fa-times fa-2x"  aria-hidden="true" id="navClose"></i></a>
+  </nav>
+
   <div class="nav-icons">
     <a href="#" class="search-link" alt="search bar" title="search bar"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a>
     <a href="#" class="calendar-link" alt="calendar" title="calendar"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></a>
@@ -72,7 +76,7 @@
   </div>
   <main>
     <div class="wrapper">
-      <div class="media-card float-left">
+      <div class="media-card float-left unfloat-small unfloat-med">
         <div class="inner-card">
           <div class="media-card-photo boximage1"></div>
           <div class="media-card-textbox">
@@ -82,7 +86,7 @@
           </div>
         </div>
       </div>
-      <div class="photobox float-left">
+      <div class="photobox float-left unfloat-small unfloat-med">
         <div class="inner-card boximage3">
           <div class="box-image-label">
             <p class="sub-text">1/13/16 | RPJpeg</p>
@@ -90,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="tall-card float-right">
+      <div class="tall-card float-right unfloat-small unfloat-med">
         <div class="inner-card">
           <h5>Upcoming Events</h5>
           <img src="images/skilift.jpg" alt="Our Ski Lift" title="UX Mountain Ski Lift" />
@@ -103,7 +107,7 @@
           <button class="my-button">Sign Up</button>
         </div>
       </div>
-      <div class="media-card float-left">
+      <div class="media-card float-left unfloat-small unfloat-med">
         <div class="inner-card">
           <div class="media-card-photo boximage4"></div>
           <div class="media-card-textbox">
@@ -113,7 +117,7 @@
           </div>
         </div>
       </div>
-      <div class="media-card float-left">
+      <div class="media-card float-left unfloat-small unfloat-med">
         <div class="inner-card">
           <div class="media-card-photo boximage5"></div>
           <div class="media-card-textbox">
@@ -123,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="media-card float-left">
+      <div class="media-card float-left unfloat-small unfloat-med">
         <div class="inner-card">
           <div class="media-card-photo boximage6"></div>
           <div class="media-card-textbox">
@@ -133,12 +137,12 @@
           </div>
         </div>
       </div>
-      <div class="tiny-card float-left">
+      <div class="tiny-card float-left unfloat-small unfloat-med">
         <div class="inner-card boximage7">
           <p>Image by RPJpeg (not really)</p>
         </div>
       </div>
-      <div class="photobox float-left">
+      <div class="photobox float-left unfloat-small unfloat-med">
         <div class="inner-card boximage8">
           <div class="box-image-label">
             <p class="sub-text">1/14/16 | RPJpeg</p>
@@ -146,7 +150,7 @@
           </div>
         </div>
       </div>
-      <div class="media-card float-left">
+      <div class="media-card float-left unfloat-small unfloat-med">
         <div class="inner-card">
           <div class="media-card-photo boximage9"></div>
           <div class="media-card-textbox">
@@ -156,7 +160,7 @@
           </div>
         </div>
       </div>
-      <div class="media-card float-left">
+      <div class="media-card float-left unfloat-small unfloat-med">
         <div class="inner-card logo-box">
           <h1>UX<br>Mountain</h1>
           <p>We not only talk about snowboarding<br>but also skiing</p>
@@ -180,7 +184,7 @@
     <a href="#" alt="carousel right arrow" title="carousel right arrow" id="carRightButtonA"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
 
     <div class="left-car image-state-1"></div>
-    <div class="right-car right-car1">
+    <div class="right-car right-car1 clearfix">
       <div class="inner-right-car">
         <h2>UX Mountain Lodge</h2>
         <p>Excellent place to hang out after a day on the slopes or a day making the best designs out there! Come say "Hi!".  Everyone is welcome!</p>
@@ -194,7 +198,7 @@
     <a href="#" alt="carousel right arrow" title="carousel right arrow" id="carRightButtonB"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
 
     <div class="left-car image-state-2"></div>
-    <div class="right-car right-car2">
+    <div class="right-car right-car2 clearfix">
       <div class="inner-right-car">
         <h2>UX Mountain Slopes</h2>
         <p>We have the best skiing and snowboarding in the area, hands down! Just check out our <a href="#">reviews</a>. When you experience the <em>design</em> of these mountains first-hand, you'll easily see the difference. Hope to see you soon!</p>
@@ -208,7 +212,7 @@
     <a href="#" alt="carousel right arrow" title="carousel right arrow" id="carRightButtonC"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
 
     <div class="left-car image-state-3"></div>
-    <div class="right-car right-car3">
+    <div class="right-car right-car3 clearfix">
       <div class="inner-right-car">
         <h2>UX Grill</h2>
         <p>Some of the best food in the area.  Our chefs are the best food designers in all the land.  If you like good food and a great user experience, then you'll love our grill.  We have food to satisfy any craving!</p>
@@ -300,7 +304,7 @@
 
   <footer>
     <div class="wrapper">
-      <ul class="float-left">
+      <ul class="float-left unfloat-small">
         <li><strong>NAVIGATION</strong></li>
         <a href="#" alt="Main"><li>Main</li></a>
         <a href="#" alt="Activities"><li>Activities</li></a>
@@ -309,20 +313,20 @@
         <a href="#" alt="Reservations"><li>Reservations</li></a>
         <a href="#" alt="Contact"><li>Contact</li></a>
       </ul>
-      <ul class="float-left">
+      <ul class="float-left unfloat-small">
         <li><strong>RESERVATIONS</strong></li>
         <a href="#" alt="Hotel Rooms"><li>Hotel Rooms</li></a>
         <a href="#" alt="Lessons"><li>Lessons</li></a>
         <a href="#" alt="Group Events"><li>Group Events</li></a>
         <a href="#" alt="Dinner"><li>Dinner</li></a>
       </ul>
-      <ul class="float-left clearfix">
+      <ul class="float-left unfloat-small clearfix">
         <li><strong>ABOUT US</strong></li>
         <a href="#" alt="Company Info"><li>Company Info</li></a>
         <a href="#" alt="Calendar"><li>Calendar</li></a>
         <a href="#" alt="Contact Info"><li>Contact</li></a>
       </ul>
-      <div class="footer-box float-right clearfix">
+      <div class="footer-box float-right unfloat-small unfloat-med clearfix">
         <p>Check out our company information and sponsors!</p>
         <a href="#" alt="UX Mountain Home" title="ux mountain home"><h1 class="float-left">UX</h1></a>
         <a href="#" alt="Sponsor link" title="sponsor link" target="_blank"><img src="http://placehold.it/80x55" alt="sponsor logo" title="sponsor logo" target="_blank" class="float-right clearfix" /> </a>
@@ -332,16 +336,18 @@
 
   <div class="sub-footer">
     <div class="wrapper">
-      <div class="left-sub float-left">
+      <div class="left-sub float-left unfloat-small unfloat-med">
         <p><strong>some of our legal things</strong></p>
         <P><a href="#" alt="privacy policy">Privacy Policy</a> | <a href="#" alt="terms">Terms &amp; Conditionas</a> | <a href="#" alt="legal">Legal Information</a>
       </div>
-      <div class="right-sub float-right clearfix">
-        <p><strong class="text-right float-right clearfix">call for more information</strong></p>
-        <p class="float-right clearfix"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> 555-555-5555 | Available M-F 9-5
+      <div class="right-sub float-right unfloat-small unfloat-med clearfix">
+        <p><strong class="text-right float-right unfloat-small unfloat-med clearfix">call for more information</strong></p>
+        <p class="float-right unfloat-small unfloat-med clearfix"><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> 555-555-5555 | Available M-F 9-5
       </div>
     </div>
   </div>
+
+  <a href="#" alt="Back to Top" title="back to top" class="back-top"><i class="fa fa-arrow-up fa-lg" aria-hidden="true"></i></a>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/index.js"></script>

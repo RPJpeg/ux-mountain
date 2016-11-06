@@ -7,6 +7,7 @@ section
     p
       text-align: center
       padding: 12px
+        
     h3
       color: $highlight-dark
       text-align: center
@@ -19,6 +20,10 @@ section
     justify-content: center
     margin-top: 30px
     margin-bottom: 70px
+    @include bp-small
+      flex-direction: column
+    @include bp-medium
+      flex-direction: column
 
   .boximage11
     background-image: url(../images/dining.jpg)

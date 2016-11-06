@@ -11,7 +11,7 @@ nav
     opacity: 0.8
     padding: 15px 12px
     float: left
-    text-shadow: 1px 1px 1px black
+    text-shadow: 1px 1px 3px black
     cursor: pointer
     @include transition(.1s)
     &:hover
@@ -20,10 +20,15 @@ nav
       transform: translateY(1px)
       text-shadow: none
 
-.nav-invert
-  background-color: $prime-dark
-  @include border-radius(10px)
-
+.invert-nav
+  background-color: $highlight-dark
+  opacity: 1
+  transform: translateX(-5px)
+  &:active
+    transform: none
+    text-shadow: none
+    transform: translateX(-5px)
+    
 .nav-icons
   width: 150px
   height: 70px
@@ -68,3 +73,5 @@ header
   h1
     color: $my-white
     text-shadow: 2px 2px 2px black
+    @include bp-small
+      @include font-size(46px)

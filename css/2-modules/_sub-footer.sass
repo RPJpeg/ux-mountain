@@ -8,6 +8,11 @@
     font-weight: 300
     padding: 0 6px 6px 0
     @include font-size(12px)
+    @include bp-small
+      padding: 6px
+      text-align: center
+    @include bp-medium
+      text-align: center
   div > p
     &:first-child
       padding-top: 26px
@@ -25,3 +30,7 @@
   i
     color: $my-white
     padding-right: 6px
+    @include bp-small
+      margin-bottom: 24px
+    @include bp-medium
+      margin-bottom: 24px

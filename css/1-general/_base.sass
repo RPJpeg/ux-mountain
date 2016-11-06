@@ -33,6 +33,14 @@ html body
 .float-right
   float: right
 
+.unfloat-small
+  @include bp-small
+    float: none
+
+.unfloat-med
+  @include bp-medium
+    float: none
+
 .clearfix
   @include clearfix
 
@@ -43,12 +51,25 @@ html body
 .wrapper
   width: 860px
   margin: 0 auto
+  @include bp-small
+    width: 100%
+  @include bp-medium
+    width: 100%
 
 .media-card
   width: 215px
   height: 300px
   padding: 6px
   @include clearfix
+  @include bp-small
+    width: 90%
+    margin: 10px auto
+  @include bp-small
+    p
+      @include font-size(11px)
+  @include bp-medium
+    width: 90%
+    margin: 10px auto
   .inner-card
     width: 100%
     height: 100%
@@ -91,6 +112,12 @@ html body
   width: 215px
   height: 150px
   padding: 6px
+  @include bp-small
+    width: 90%
+    margin: 10px auto
+  @include bp-medium
+    width: 90%
+    margin: 10px auto
   .inner-card
     width: 100%
     height: 100%
@@ -106,13 +133,23 @@ html body
       left: 6px
       color: $my-white
       text-shadow: 1px 1px 1px black
+      @include bp-small
+        p
+          @include font-size(9px)
     &:hover
       box-shadow: 1px 1px 8px $my-dark-grey
 .tall-card
   width: 215px
   height: 450px
   padding: 6px
-  @include clearfix
+  @include bp-small
+    width: 90%
+    margin: 10px auto
+    height: 500px
+  @include bp-medium
+    width: 90%
+    margin: 10px auto
+    height: 600px
   .inner-card
     width: 100%
     height: 100%
@@ -135,6 +172,8 @@ html body
     p
       color: $my-grey
       padding: 5px 0
+      @include bp-small
+        @include font-size(11px)
     .my-button
       margin: 12px auto 0 auto
     &:hover
@@ -145,6 +184,14 @@ html body
   height: 300px
   padding: 6px
   position: relative
+  @include bp-small
+    width: 90%
+    margin: 10px auto
+    p
+      @include font-size(11px)
+  @include bp-medium
+    width: 90%
+    margin: 10px auto
   .inner-card
     width: 100%
     height: 100%
@@ -173,5 +220,12 @@ html body
 .show
   display: block
 
-.flex
-  display: flex
+.back-top
+  position: fixed
+  bottom: 15px
+  right: 15px
+  visibility: hidden
+  background-color: rgba(0,0,0,0) !important
+
+html body .arrow-show
+  visibility: visible

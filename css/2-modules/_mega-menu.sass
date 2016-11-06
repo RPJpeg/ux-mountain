@@ -15,8 +15,13 @@
     strong
       color: $my-white
       text-shadow: 1px 1px 1px $my-black
-      @include font-size(24px)
-      letter-spacing: 1.5px
+      @include font-size(18px)
+      letter-spacing: 1px
+      @include bp-medium
+        @include font-size(14px)
+      @include bp-small
+        @include font-size(11px)
+
     li
       padding-top: 16px
       @include transition(.1s)
@@ -25,6 +30,11 @@
       &:hover
         color: $prime-light
         transform: translateX(3px)
+      @include bp-medium
+        @include font-size(12px)
+      @include bp-small
+        @include font-size(10px)
+        padding-top: 6px
   ul > li
     &:first-child
       padding-top: 0
@@ -38,8 +48,21 @@
     padding: 12px
     margin-top: 40px
     float: left
+    @include bp-small
+      float: none
+      margin-top: 12px
+
 .mega-menu > .mega-col
   &:first-child
     margin-left: 35px
+    @include bp-medium
+      margin-left: 30px
+    @include bp-small
+      margin-left: 0
+      margin-top: 40px
 .menu-expand
   height: 330px
+  @include bp-medium
+    height: 280px
+  @include bp-small
+    height: 80vh
